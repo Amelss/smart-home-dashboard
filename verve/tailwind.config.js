@@ -8,6 +8,7 @@ module.exports = {
       },
       colors: {
         navPurple: "#7A40F2",
+        dashboardBackground: "#F9F9F9",
       },
     },
   },

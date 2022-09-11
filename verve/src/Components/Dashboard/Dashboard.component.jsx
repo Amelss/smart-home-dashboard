@@ -6,11 +6,17 @@ import Devices from '../DevicesPanel/Devices.component'
 
 export default function Dashboard() {
   return (
-    <div className='grid grid-cols-3 place-items-center'>
-      <Navigation />
-      <TemperatureDashboard />
-      <Devices />
-    </div>
-    
-  )
+      <div className="hidden lg:flex pl-3 pr-3 bg-dashboardBackground ">
+        <Navigation />
+        <div className="pl-4 grid grid-cols-2 w-full pt-3 pb-3">
+          <div>
+            <TemperatureDashboard />
+          </div>
+          <div className="pl-4">
+            <Devices />
+          </div>
+        </div>
+      </div>
+   
+  );
 }

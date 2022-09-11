@@ -6,7 +6,6 @@ export default function TemperatureDashboard() {
       <div className='bg-pink-500 hidden lg:block'>TemperatureDashboard.component
          <Welcome /> 
 
-
     </div>
   )
 }
