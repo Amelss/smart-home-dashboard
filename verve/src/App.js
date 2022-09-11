@@ -1,9 +1,12 @@
-
-
+import Dashboard from "./Components/Dashboard/Dashboard.component";
+import Mobile from "./Components/Mobile";
 function App() {
   return (
-    <div className="App">
-      <h1 className="text-green-500 text-center">Hello</h1>
+    <div className="bg-white">
+    
+      <Dashboard />
+      <Mobile />
+      
     </div>
   );
 }
