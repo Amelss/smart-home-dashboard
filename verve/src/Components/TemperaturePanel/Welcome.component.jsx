@@ -2,10 +2,43 @@ import React from 'react'
 
 export default function Welcome() {
   return (
-    <div className="bg-pink-500 ">
-      <h1> Welcome
-Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit quaerat perspiciatis est, exercitationem similique sunt ab atque vero non dolore dolorum. Dicta quidem, accusantium, explicabo consequatur voluptatibus nihil placeat maxime eum voluptate vero ab sit molestias sint ex ipsum. Itaque sint asperiores corrupti delectus maxime aliquid voluptates praesentium sed excepturi atque dolore, veniam aperiam tenetur? Necessitatibus, nam nisi. Fugiat mollitia debitis odit, excepturi laboriosam eaque. Sint neque sapiente incidunt inventore animi cupiditate soluta aliquam? Beatae maiores dignissimos labore tenetur iste.
-      </h1>
+    <div className="bg-welcomeYellow rounded-3xl pt-4 pl-4 pr-0 flex justify-between mb-10">
+      <div className="pb-4">
+        <h1 className="font-poppins text-titleText text-2xl font-bold tracking-wide pb-2">
+          {" "}
+          Hello, Scarlett!
+        </h1>
+        <p className="font-mulish text-xs pb-2 text-miniMessage w-[200px] xl:w-[300px]">
+          Welcome Home! The air quality is good and fresh, you can go out today.
+        </p>
+        <div className="flex items-center font-mulish pb-2">
+          <img
+            src="./assets/verve-images/thermometer.png"
+            alt="temperature"
+            className="w-3"
+          />
+          <p className="text-lg pl-2">
+            +25<span className="text-sm">&#8451;</span>
+            <span className="text-xs">Outdoor temperature</span>
+          </p>
+        </div>
+        <div className="flex items-center font-mulish">
+          <img
+            src="/assets/verve-images/cloud.png"
+            alt="clouds"
+            className="w-4"
+          />
+          <p className="pl-2 text-sm">Fuzzy, cloudy weather</p>
+        </div>
+      </div>
+      
+        <img
+          src="/assets/verve-images/hello-scarlett.png"
+          alt=""
+          className=" w-56 h-auto -ml-24 xl:w-56 xl:h-auto rounded-r-3xl xl:ml-0"
+        />
+      
+    
     </div>
   );
 }

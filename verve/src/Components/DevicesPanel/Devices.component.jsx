@@ -7,7 +7,7 @@ import PowerGraph from './PowerGraph'
 
 export default function Devices() {
   return (
-    <div className=' hidden lg:block'>
+    <div className=' hidden lg:block font-mulish'>
       <div>
          <Settings/>
       </div>
