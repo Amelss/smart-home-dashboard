@@ -5,7 +5,7 @@ module.exports = {
       fontFamily: {
         poppins: ["Poppins"],
         mulish: ["Mulish"],
-        lato: ['Lato']
+        lato: ["Lato"],
       },
       colors: {
         navPurple: "#7A40F2",
@@ -14,8 +14,14 @@ module.exports = {
         titleText: "#C45A01",
         welcomeYellow: "#FFECC8",
         miniMessage: "#BD5600",
+        barelyGray: "#E6E5F2",
+        lightGrey: "#9897AD",
+        hotYellow: "#F4C427",
+        lightOrange: "#FF9060",
+        lightBlue: "#3ACBE9",
+        deviceGrey: "#F5F5F5",
       },
     },
   },
-  plugins: [],
+  plugins: [require("flowbite/plugin")],
 };

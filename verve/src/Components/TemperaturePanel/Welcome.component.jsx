@@ -17,9 +17,9 @@ export default function Welcome() {
             alt="temperature"
             className="w-3"
           />
-          <p className="text-lg pl-2">
-            +25<span className="text-sm">&#8451;</span>
-            <span className="text-xs">Outdoor temperature</span>
+          <p className="text-md pl-2">
+            +25<span className="text-xs">&#8451;</span>
+            <span className="text-xs tracking-wide"> Outdoor temperature</span>
           </p>
         </div>
         <div className="flex items-center font-mulish">
@@ -28,14 +28,14 @@ export default function Welcome() {
             alt="clouds"
             className="w-4"
           />
-          <p className="pl-2 text-sm">Fuzzy, cloudy weather</p>
+          <p className="pl-2 text-xs tracking-wide">Fuzzy, cloudy weather</p>
         </div>
       </div>
       
         <img
           src="/assets/verve-images/hello-scarlett.png"
           alt=""
-          className=" w-56 h-auto -ml-24 xl:w-56 xl:h-auto rounded-r-3xl xl:ml-0"
+          className=" w-56 h-auto -ml-24 xl:w-56 xl:h-auto rounded-r-3xl xl:ml-0 2xl:w-56 2xl:-ml-4"
         />
       
     
