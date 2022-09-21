@@ -168,7 +168,7 @@ export default function MyDevices() {
               </div>
             </div>
             <p className="text-white text-xs tracking-wider font-bold mt-4 pl-1">
-              Lamp
+              Lamps
             </p>
           </div>
         </div>

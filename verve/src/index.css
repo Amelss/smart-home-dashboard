@@ -21,3 +21,15 @@
 .device-yellow-blue-padding{
     @apply pt-3 pl-2 pr-2 pb-3 xl:pl-3
 }
+
+.users-img{
+   @apply  w-8 mx-auto pb-2
+}
+
+.user-name-text{
+    @apply text-center text-xs
+}
+
+.admin-text{
+    @apply text-[10px] text-center text-lightGrey
+}

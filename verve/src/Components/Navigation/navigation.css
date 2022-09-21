@@ -1,0 +1,68 @@
+.navbar ul li:hover{
+    background-color: #F9F9F9;
+    transition: 0.1s;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+
+
+.navbar ul li a:hover::before{
+    position: absolute;
+    content: '';
+    height: 15px;
+    width: 15px;
+    background: #7A40F2;
+    right: 0;
+    top: -15px;
+    border-radius: 50%;
+    box-shadow:  5px 5px 0 #F9F9F9;
+    
+    
+}
+
+.navbar ul li a:hover::after{
+    position: absolute;
+    content: '';
+    height: 15px;
+    width: 15px;
+    background: #7A40F2;
+    right: 0;
+    bottom: -15px;
+    border-radius: 50%;
+    box-shadow:  5px -5px 0 #F9F9F9;
+    
+    
+}
+
+.navbar ul li{
+    position: relative;
+}
+
+
+
+.navbar ul li.active::before{
+    position: absolute;
+    content: '';
+    height: 15px;
+    width: 15px;
+    background: #7A40F2;
+    right: 0;
+    top: -15px;
+    border-radius: 50%;
+    box-shadow:  5px 5px 0 #F9F9F9;
+    
+    
+}
+
+.navbar ul li.active::after{
+    position: absolute;
+    content: '';
+    height: 15px;
+    width: 15px;
+    background: #7A40F2;
+    right: 0;
+    bottom: -15px;
+    border-radius: 50%;
+    box-shadow:  5px -5px 0 #F9F9F9;
+}
