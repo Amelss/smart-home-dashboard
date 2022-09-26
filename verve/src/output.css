@@ -1031,6 +1031,14 @@ input[type="range"]::-ms-fill-lower{
   height: auto;
 }
 
+.h-full{
+  height: 100%;
+}
+
+.h-96{
+  height: 24rem;
+}
+
 .w-full{
   width: 100%;
 }
@@ -1091,6 +1099,26 @@ input[type="range"]::-ms-fill-lower{
   width: 14rem;
 }
 
+.w-20{
+  width: 5rem;
+}
+
+.w-64{
+  width: 16rem;
+}
+
+.w-72{
+  width: 18rem;
+}
+
+.w-9{
+  width: 2.25rem;
+}
+
+.w-80{
+  width: 20rem;
+}
+
 .cursor-pointer{
   cursor: pointer;
 }
@@ -1145,10 +1173,6 @@ input[type="range"]::-ms-fill-lower{
 
 .rounded-xl{
   border-radius: 0.75rem;
-}
-
-.rounded{
-  border-radius: 0.25rem;
 }
 
 .rounded-l-full{
@@ -1351,10 +1375,6 @@ input[type="range"]::-ms-fill-lower{
   padding-bottom: 1rem;
 }
 
-.pt-5{
-  padding-top: 1.25rem;
-}
-
 .text-center{
   text-align: center;
 }
@@ -1415,11 +1435,6 @@ input[type="range"]::-ms-fill-lower{
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.text-lightGrey{
-  --tw-text-opacity: 1;
-  color: rgb(152 151 173 / var(--tw-text-opacity));
-}
-
 .text-gray-900{
   --tw-text-opacity: 1;
   color: rgb(17 24 39 / var(--tw-text-opacity));
@@ -1428,6 +1443,11 @@ input[type="range"]::-ms-fill-lower{
 .text-navPurple{
   --tw-text-opacity: 1;
   color: rgb(122 64 242 / var(--tw-text-opacity));
+}
+
+.text-lightGrey{
+  --tw-text-opacity: 1;
+  color: rgb(152 151 173 / var(--tw-text-opacity));
 }
 
 .text-titleText{
@@ -1696,6 +1716,10 @@ input[type="range"]::-ms-fill-lower{
 
   .xl\:h-auto{
     height: auto;
+  }
+
+  .xl\:h-screen{
+    height: 100vh;
   }
 
   .xl\:w-\[1350px\]{
