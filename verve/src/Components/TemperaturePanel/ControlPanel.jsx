@@ -1,6 +1,47 @@
 import React from 'react'
+import { useState } from 'react';
+import { current } from 'tailwindcss/colors';
+import './controlPanel.css'
 
 export default function ControlPanel() {
+
+  const [toggleButton, setToggleButton] = useState(false)
+  const [on, setOn] = useState('')
+  const [toggleLights, setToggleLights] = useState(false)
+  const [lightsOn, setLightsOn] = useState('')
+
+  
+//   const toggleStyles = {
+//     background: '#7A40F2',
+//     color: '#FFFFFF',
+//     boxShadow: '1px 2px 9px #7A40F2',
+//     border: '1px solid #E6E5F2'
+
+    
+// }
+
+  const setStyle = () => {
+    
+    setToggleButton(current => !current)
+    setOn(current => !current)
+  }
+
+  const setLights = () => {
+    setToggleLights((current) => !current);
+    setLightsOn((current) => !current);
+  };
+
+  
+  
+  
+  // const setStyle = () => {
+  //   console.log('i am clicked')
+
+  //   setToggleButton('toggleOnStyle')
+  // }
+
+ 
+
   return (
     <div className="font-mulish">
       <div className="flex items-center justify-between">
@@ -42,10 +83,10 @@ export default function ControlPanel() {
 
         <div className='w-32 bg-white p-3 rounded-xl h-24 border border-2-barelyGray'>
           <div className='flex justify-between'>
-            <span class="text-[10px] font-medium text-gray-900 dark:text-gray-300 mt-[1px]" id='btn-text'>ON</span>
-              <label for="small-toggle" class="inline-flex relative items-center mb-5 cursor-pointer">
-                <input type="checkbox" value="" id="small-toggle" class="sr-only peer" checked/>
-                  <div class="w-7 h-4 bg-gray-200 peer-focus:outline-none peer-focus:ring-none rounded-full peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-3 after:w-3 after:transition-all dark:border-gray-600 peer-checked:bg-purple-500">
+            <span className="text-[10px] font-medium text-gray-900 dark:text-gray-300 mt-[1px]" id='btn-text'>ON</span>
+              <label htmlFor="small-toggle" className="inline-flex relative items-center mb-5 cursor-pointer">
+                <input type="checkbox" value="" id="small-toggle" className="sr-only peer"/>
+                  <div className="w-7 h-4 bg-gray-200 peer-focus:outline-none peer-focus:ring-none rounded-full peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-3 after:w-3 after:transition-all dark:border-gray-600 peer-checked:bg-purple-500">
                   </div> 
               </label>
           </div>
@@ -55,10 +96,10 @@ export default function ControlPanel() {
         
         <div className='w-32 bg-navPurple p-3 rounded-xl h-24 border border-2-barelyGray ml-3'>
           <div className='flex justify-between'>
-            <span class="text-[10px] font-medium text-gray-900 dark:text-gray-300 mt-[1px]" id='btn-text'>ON</span>
-              <label for="small-toggle-1" class="inline-flex relative items-center mb-5 cursor-pointer">
-                <input type="checkbox" value="" id="small-toggle-1" class="sr-only peer" />
-                  <div class="w-7 h-4 bg-gray-200 peer-focus:outline-none peer-focus:ring-none rounded-full peer-checked:after:translate-x-full peer-checked:after:border-navPurple after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-navPurple after:border-gray-300 after:border after:rounded-full after:h-3 after:w-3 after:transition-all dark:border-gray-600 peer-checked:bg-white">
+            <span className="text-[10px] font-medium text-gray-900 dark:text-gray-300 mt-[1px]" id='btn-text'>ON</span>
+              <label htmlFor="small-toggle-1" className="inline-flex relative items-center mb-5 cursor-pointer">
+                <input type="checkbox" value="" id="small-toggle-1" className="sr-only peer" />
+                  <div className="w-7 h-4 bg-gray-200 peer-focus:outline-none peer-focus:ring-none rounded-full peer-checked:after:translate-x-full peer-checked:after:border-navPurple after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-navPurple after:border-gray-300 after:border after:rounded-full after:h-3 after:w-3 after:transition-all dark:border-gray-600 peer-checked:bg-white">
                   </div> 
               </label>
           </div>
@@ -66,12 +107,14 @@ export default function ControlPanel() {
           <p className='text-xs text-white font-bold pt-2'>Temperature</p>
         </div>
 
-        <div className='w-32 bg-white p-3 rounded-xl h-24 border border-2-barelyGray ml-3'>
+        <div style={{backgroundColor: toggleButton ? '#7A40F2 ': '#FFFFFF', color: toggleButton ? '#9897AD' : '#FF0000', transition: toggleButton ? '' : 'ease-in-out', boxShadow: toggleButton ? '1px 2px 9px #7A40F2' : '', border: toggleButton ? 'none' : '1px solid #E6E5F2' 
+}}
+ className='w-32 p-3 rounded-xl h-24 border border-2-barelyGray ml-3'>
           <div className='flex justify-between'>
-            <span class="text-[10px] font-medium text-gray-900 dark:text-gray-300 mt-[1px]" id='btn-text'>OFF</span>
-              <label for="small-toggle-2" class="inline-flex relative items-center mb-5 cursor-pointer">
-                <input type="checkbox" value="" id="small-toggle-2" class="sr-only peer" />
-                  <div class="w-7 h-4 bg-gray-200 peer-focus:outline-none  peer-focus:ring-none rounded-full peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-3 after:w-3 after:transition-all dark:border-gray-600 peer-checked:bg-navPurple">
+            <span className="text-[10px] font-medium text-gray-900 dark:text-gray-300 mt-[1px]" id='btn-text'>{on ? 'ON': 'OFF'}</span>
+              <label htmlFor="small-toggle-2" className="inline-flex relative items-center mb-5 cursor-pointer">
+                <input type="checkbox" value="" id="small-toggle-2" className="sr-only peer"   />
+                  <div onClick={setStyle} className="w-7 h-4 bg-gray-200 peer-focus:outline-none  peer-focus:ring-none rounded-full peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-3 after:w-3 after:transition-all dark:border-gray-600 peer-checked:bg-navPurple">
                   </div> 
               </label>
           </div>
@@ -79,12 +122,13 @@ export default function ControlPanel() {
           <p className=' text-[10px] xl:text-xs text-lightGrey font-bold pt-2'>Air Conditioner</p>
         </div>
 
-        <div className='w-32 bg-white p-3 rounded-xl h-24 border border-2-barelyGray ml-3'>
+        <div style={{backgroundColor: toggleLights ? '#7A40F2 ': '#FFFFFF', color: toggleLights ? '#9897AD' : '#FF0000', transition: toggleLights ? '' : 'ease-in-out', boxShadow: toggleLights ? '1px 2px 9px #7A40F2' : '', border: toggleLights ? 'none' : '1px solid #E6E5F2' 
+}} className='w-32 p-3 rounded-xl h-24 border border-2-barelyGray ml-3'>
           <div className='flex justify-between'>
-            <span class="text-[10px] font-medium text-gray-900 dark:text-gray-300 mt-[1px]" id='btn-text'>OFF</span>
-              <label for="small-toggle-3" class="inline-flex relative items-center mb-5 cursor-pointer">
-                <input type="checkbox" value="" id="small-toggle-3" class="sr-only peer" />
-                  <div class="w-7 h-4 bg-gray-200 peer-focus:outline-none peer-focus:ring-none rounded-full peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-3 after:w-3 after:transition-all dark:border-gray-600 peer-checked:bg-navPurple">
+            <span className="text-[10px] font-medium text-gray-900 dark:text-gray-300 mt-[1px]" id='btn-text'> {lightsOn ? 'ON' : 'OFF'}</span>
+              <label htmlFor="small-toggle-3" className="inline-flex relative items-center mb-5 cursor-pointer">
+                <input type="checkbox" value="" id="small-toggle-3" className="sr-only peer" />
+                  <div onClick={setLights}  className="w-7 h-4 bg-gray-200 peer-focus:outline-none peer-focus:ring-none rounded-full peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-3 after:w-3 after:transition-all dark:border-gray-600 peer-checked:bg-navPurple">
                   </div>  
               </label>
           </div>

@@ -11,7 +11,7 @@ export default function PowerGraph() {
             id="month"
             className="border-none rounded-lg h-7 w-24 text-xs pr-0 pt-0 pb-0 bg-search"
           >
-            <option value="month" selected disabled hidden >Month</option>
+            <option value="month"hidden >Month</option>
             <option value="jan">January</option>
             <option value="feb">February</option>
             <option value="march">March</option>
