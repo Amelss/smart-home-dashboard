@@ -30,8 +30,8 @@ export default function MyDevices() {
   }
 
     const toggleLamps = () => {
-      setLampsToggle((current) => !current);
-      setLampsOn((current) => !current);
+      setLampsToggle(current => !current);
+      setLampsOn(current => !current);
     };
 
   // const toggleAllDevices = () => {
@@ -69,7 +69,7 @@ export default function MyDevices() {
       <div className="grid grid-cols-2 mx-auto pl-2 pr-2 ">
         <div className="device-purple-yellow-padding">
           <div
-            style={{ backgroundColor: fridgeToggle ? "#7A40F2" : "#BBBBC4" }}
+            style={{ backgroundColor: fridgeToggle ? "#7A40F2" : "#BBBBC4" , transform: fridgeToggle ? 'scale(1.1)' : ''}}
             className="bg-navPurple h-[90px] p-2  rounded-2xl "
           >
             <div className="device-controls">
@@ -99,7 +99,7 @@ export default function MyDevices() {
                   />
                   <div
                     onClick={toggleFridge}
-                    className="w-7 h-4  bg-gray-200 peer-focus:outline-none peer-focus:ring-none rounded-full  peer-checked:after:translate-x-full peer-checked:after:border-navPurple after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-navPurple after:border-na after:border after:rounded-full after:h-3 after:w-3 after:transition-all dark:border-gray-600 peer-checked:bg-white"
+                    className="w-7 h-4  bg-gray-200 peer-focus:outline-none peer-focus:ring-none rounded-full  peer-checked:after:translate-x-full peer-checked:after:border-navPurple after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white peer-checked:after:bg-navPurple after:border-na after:border after:rounded-full after:h-3 after:w-3 after:transition-all dark:border-gray-600 peer-checked:bg-white"
                   ></div>
                 </label>
               </div>
@@ -112,7 +112,7 @@ export default function MyDevices() {
 
         <div className="device-purple-yellow-padding">
           <div
-            style={{ backgroundColor: routerToggle ? "#F4C427" : "#BBBBC4" }}
+            style={{ backgroundColor: routerToggle ? "#F4C427" : "#BBBBC4", transform: routerToggle ? 'scale(1.1)' : '' }}
             className="bg-hotYellow h-[90px]  p-2  rounded-2xl"
           >
             <div className="device-controls">
@@ -142,7 +142,7 @@ export default function MyDevices() {
                   />
                   <div
                     onClick={toggleRouter}
-                    className="w-7 h-4  bg-gray-200 peer-focus:outline-none peer-focus:ring-none rounded-full  peer-checked:after:translate-x-full peer-checked:after:border-hotYellow after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-hotYellow after:border after:rounded-full after:h-3 after:w-3 after:transition-all dark:border-gray-600 peer-checked:bg-white"
+                    className="w-7 h-4  bg-gray-200 peer-focus:outline-none peer-focus:ring-none rounded-full  peer-checked:after:translate-x-full peer-checked:after:border-hotYellow after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white peer-checked:after:bg-hotYellow after:border after:rounded-full after:h-3 after:w-3 after:transition-all dark:border-gray-600 peer-checked:bg-white"
                   ></div>
                 </label>
               </div>
@@ -157,7 +157,7 @@ export default function MyDevices() {
       <div className="grid grid-cols-2 mx-auto pl-2 pr-2 ">
         <div className="device-yellow-blue-padding">
           <div
-            style={{ backgroundColor: musicToggle ? "#FF9060" : "#BBBBC4" }}
+            style={{ backgroundColor: musicToggle ? "#FF9060" : "#BBBBC4", transform: musicToggle ? 'scale(1.1)' : ''  }}
             className="bg-lightOrange h-[90px] p-2  rounded-2xl "
           >
             <div className="device-controls">
@@ -187,7 +187,7 @@ export default function MyDevices() {
                   />
                   <div
                     onClick={toggleMusic}
-                    className="w-7 h-4  bg-gray-200 peer-focus:outline-none peer-focus:ring-none rounded-full  peer-checked:after:translate-x-full peer-checked:after:border-lightOrange after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-lightOrange after:border-na after:border after:rounded-full after:h-3 after:w-3 after:transition-all dark:border-gray-600 peer-checked:bg-white"
+                    className="w-7 h-4  bg-gray-200 peer-focus:outline-none peer-focus:ring-none rounded-full  peer-checked:after:translate-x-full peer-checked:after:border-lightOrange after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white peer-checked:after:bg-lightOrange after:border-na after:border after:rounded-full after:h-3 after:w-3 after:transition-all dark:border-gray-600 peer-checked:bg-white"
                   ></div>
                 </label>
               </div>
@@ -200,7 +200,7 @@ export default function MyDevices() {
 
         <div className="device-yellow-blue-padding">
           <div
-            style={{ backgroundColor: lampsToggle ? "#3ACBE9" : "#BBBBC4" }}
+            style={{ backgroundColor: lampsToggle ? "#3ACBE9" : "#BBBBC4", transform: lampsToggle ? 'scale(1.1)' : ''  }}
             className="bg-lightBlue h-[90px] p-2  rounded-2xl"
           >
             <div className="device-controls">
@@ -230,7 +230,7 @@ export default function MyDevices() {
                   />
                   <div
                     onClick={toggleLamps}
-                    className="w-7 h-4  bg-gray-200 peer-focus:outline-none peer-focus:ring-none rounded-full  peer-checked:after:translate-x-full peer-checked:after:border-lightBlue after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-lightBlue after:border after:rounded-full after:h-3 after:w-3 after:transition-all dark:border-gray-600 peer-checked:bg-white"
+                    className="w-7 h-4  bg-gray-200 peer-focus:outline-none peer-focus:ring-none rounded-full  peer-checked:after:translate-x-full peer-checked:after:border-lightBlue after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white peer-checked:after:bg-lightBlue after:border after:rounded-full after:h-3 after:w-3 after:transition-all dark:border-gray-600 peer-checked:bg-white"
                   ></div>
                 </label>
               </div>
