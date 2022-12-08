@@ -34,6 +34,9 @@ export default function Thermostat() {
         </div>
         
       </div>
+      <div>
+
+      
       <div className='circle'>
         <img src="/assets/verve-images/oval.png" alt="" className='mx-auto w-52' />
         <div className='textContainer'>
@@ -54,7 +57,7 @@ export default function Thermostat() {
         
         </div>
         </div>
-        
+        </div>
 
     </div>
   )
